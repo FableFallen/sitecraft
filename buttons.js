@@ -88,41 +88,73 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.onclick = () => window.open(button.url);
         container.appendChild(btn);
     });
+
+
+
+
+    let ctrlPressed = false;
+    let altPressed = false;
+
+    document.addEventListener("keydown", (event) => {
+        if (event.code === "ControlLeft" || event.code === "ControlRight") {
+            ctrlPressed = true;
+        }
+
+        if (event.code === "AltLeft" || event.code === "AltRight") {
+            altPressed = true;
+        }
+
+        if (ctrlPressed && altPressed && (event.code === "KeyC" || event.key === "c" || event.key === "C")) {
+            const commandPrompt = document.querySelector(".command-prompt");
+            commandPrompt.style.display = "block";
+        }
+    });
+
+    document.addEventListener("keyup", (event) => {
+        if (event.code === "ControlLeft" || event.code === "ControlRight") {
+            ctrlPressed = false;
+        }
+
+        if (event.code === "AltLeft" || event.code === "AltRight") {
+            altPressed = false;
+        }
+    });
+
+
+
+
+
+
+    function processCommand(command) {
+        const [action, title, url] = command.split(",");
+
+        if (action === "addButton") {
+            const newButton = {
+                title: title.trim(),
+                url: url.trim(),
+            };
+
+            buttons.push(newButton);
+
+            const btn = document.createElement("button");
+            btn.classList.add("mod-button");
+            btn.textContent = newButton.title;
+            btn.onclick = () => window.open(newButton.url);
+            container.appendChild(btn);
+        } else {
+            alert("Invalid command");
+        }
+    }
+
+    const commandInput = document.querySelector("#command-input");
+    commandInput.addEventListener("keydown", (event) => {
+        if (event.code === "Enter") {
+            processCommand(commandInput.value);
+            commandInput.value = "";
+        }
+    });
 });
 
 
-document.addEventListener("keydown", (event) => {
-    if (event.ctrlKey && event.shiftKey && event.code === "KeyC") {
-        const commandPrompt = document.querySelector(".command-prompt");
-        commandPrompt.style.display = "block";
-    }
-});
 
-function processCommand(command) {
-    const [action, title, url] = command.split(",");
 
-    if (action === "addButton") {
-        const newButton = {
-            title: title.trim(),
-            url: url.trim(),
-        };
-
-        buttons.push(newButton);
-
-        const btn = document.createElement("button");
-        btn.classList.add("mod-button");
-        btn.textContent = newButton.title;
-        btn.onclick = () => window.open(newButton.url);
-        container.appendChild(btn);
-    } else {
-        alert("Invalid command");
-    }
-}
-
-const commandInput = document.querySelector("#command-input");
-commandInput.addEventListener("keydown", (event) => {
-    if (event.code === "Enter") {
-        processCommand(commandInput.value);
-        commandInput.value = "";
-    }
-});
