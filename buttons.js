@@ -89,3 +89,40 @@ document.addEventListener("DOMContentLoaded", () => {
         container.appendChild(btn);
     });
 });
+
+
+document.addEventListener("keydown", (event) => {
+    if (event.ctrlKey && event.shiftKey && event.code === "KeyC") {
+        const commandPrompt = document.querySelector(".command-prompt");
+        commandPrompt.style.display = "block";
+    }
+});
+
+function processCommand(command) {
+    const [action, title, url] = command.split(",");
+
+    if (action === "addButton") {
+        const newButton = {
+            title: title.trim(),
+            url: url.trim(),
+        };
+
+        buttons.push(newButton);
+
+        const btn = document.createElement("button");
+        btn.classList.add("mod-button");
+        btn.textContent = newButton.title;
+        btn.onclick = () => window.open(newButton.url);
+        container.appendChild(btn);
+    } else {
+        alert("Invalid command");
+    }
+}
+
+const commandInput = document.querySelector("#command-input");
+commandInput.addEventListener("keydown", (event) => {
+    if (event.code === "Enter") {
+        processCommand(commandInput.value);
+        commandInput.value = "";
+    }
+});

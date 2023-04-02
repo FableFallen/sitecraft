@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: 'Norse';
-    src: url('https://fablefallen.github.io/fablefonts/fonts/Norse.woff') format('woff');
+    src: url('https://www.fablefallen.net/fonts/Norse.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -48,7 +48,7 @@ body {
 
 .mod-button {
     font-family: Norse, sans-serif;
-    background-color: #9c9c9c;
+    background-color: #000000;
     border: none;
     color: #f3b63c;
     cursor: pointer;
