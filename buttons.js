@@ -78,7 +78,7 @@ const buttons = [
 
     // Add more button objects here
 ];
-
+document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector(".container");
     buttons.forEach((button) => {
@@ -154,7 +154,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-
-
-
-
+});
