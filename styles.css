@@ -1,79 +1,302 @@
+/* Original styles from the changelog and future mods code */
+/* Add them here, along with the new styles for the title container and the footer */
+
 @font-face {
     font-family: 'Norse';
     src: url('https://fablefallen.github.io/fablefonts/fonts/Norse.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-  }
-  
-  body {
+}
+
+body {
     font-family: Norse, sans-serif;
     background-color: #2b2a2a;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Other body styles */
+}
+
+/* Style for the title container */
+.title-container {
+    font-family: Norse, 'sans-serif';
     color: #f3b63c;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
+    font-size: 36px;
+    margin: 20px 0;
+    text-align: center;
+    text-shadow: 2px 2px #9c9c9c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 100px;
+}
+
+.mod-botton h1 {
+    color: #f3b63c;
+    font-size: 36px;
+    margin: 20px 0;
+    text-align: center;
+    text-shadow: 2px 2px #9c9c9c;
+}
+
+.mod-button {
+    font-family: Norse, sans-serif;
+    background-color: #9c9c9c;
+    border: none;
+    color: #f3b63c;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    text-shadow: 1px 1px #000000;
+}
+
+.mod-button:hover {
+    background-color: #f3b63c;
+    color: #000000;
+    text-shadow: none;
+}
+
+
+/* Style for the glow animation */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de, 0 0 200px #ff00de, 0 0 250px #ff00de;
+    }
+}
+
+.changelog {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-  }
-  
-  button {
-    background-color: #f3b63c;
+}
+
+.changelog hr {
     border: none;
-    border-radius: 5px;
-    color: #2b2a2a;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    text-align: center;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  button:hover {
-    background-color: #d9a328;
-  }
-  
-  .tooltip {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .tooltip .tooltip-text {
-    visibility: hidden;
-    width: 120px;
-    background-color: #f3b63c;
-    color: #2b2a2a;
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px;
+    border-top: 1px solid #f3b63c;
+    margin: 1rem 0;
+    width: 30%;
+}
+
+
+/* Style for the changelog glowing header */
+.changelog h1 {
+    font-family: Norse, sans-serif;
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 10px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+
+
+.changelog h2 {
+    font-family: Norse, sans-serif;
+    color: #fff;
+    font-size: 34px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.changelog ul {
+    font-family: Norse, sans-serif;
+    color: #fff;
+    font-size: 22px;
+    margin: 0;
+    padding-left: 30px;
+}
+
+.tooltip {
+    font-size: 18px;
     position: absolute;
     z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .tooltip:hover .tooltip-text {
+    visibility: hidden;
+    background-color: #634444;
+    color: #fffbbc;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.changelog li {
+    color: #fff;
+    list-style-type: none;
+    position: relative;
+}
+
+.changelog li:hover {
+    color: #f0c022;
+}
+
+.changelog li:hover .tooltip {
     visibility: visible;
-    opacity: 1;
-  }
-  
-  @keyframes fadeIn {
+}
+
+.changelog li:hover .tooltiptext {
+    visibility: visible;
+}
+
+@keyframes spin {
     0% {
-      opacity: 0;
+        transform: rotate(0deg);
     }
+
     100% {
-      opacity: 1;
+        transform: rotate(360deg);
     }
-  }
+}
+
+/* Style for the loading wheel */
+.loading-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid #f2f2f2;
+    border-top: 4px solid #3498db;
+    animation: spin 1s ease-in-out infinite;
+}
+
+.loading-text {
+    margin-left: 10px;
+    font-size: 24px;
+    color: #ffc550;
+    text-transform: uppercase;
+}
+
+.future-mods-header {
+    font-family: Norse, sans-serif;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(95, 95, 95);
+    height: 100px;
+}
+
+.future-mods-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.future-mods-list {
+    font-family: Norse, sans-serif;
+    list-style: none;
+    margin: 10;
+    padding: 0;
+}
+
+.future-mods-list li {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #f3b63c;
+    text-shadow: 1px 1px #000000;
+}
+
+.social-media-footer-container {
+    margin-top: 50px;
+    padding: 20px 0;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
   
-  .changelog-text {
-    animation: fadeIn 2s;
-  }
-  
+
+.social-media-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.social-media-link:hover {
+    transform: scale(1.1);
+}
+
+.social-media-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    top: -50%;
+    left: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.1) 50%);
+    transform: translateY(100%);
+    animation: wave 2s infinite linear;
+}
+
+.social-media-link i {
+    font-size: 30px;
+}
+
+.discord {
+    background-color: #7289da;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.facebook {
+    background-color: #1877f2;
+}
+
+.instagram {
+    background-color: #e1306c;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+
+/* Style for the footer */
+footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    /* Change this to your desired professional font */
+    color: #f2f2f2;
+}
+
+footer p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+footer p:last-child {
+    margin-bottom: 0;
+}
