@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>My Test HTML Page</title>
-	<style>
-		@font-face {
-			font-family: 'Norse';
-			src: url("fonts/Norse.woff2") format('woff2'),
-				url("fonts/Norse.woff") format('woff');
-		}
-		body {
-			font-family: "Norse", sans-serif;
-		}
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valheim Mods</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<h1>Welcome to My Test HTML Page</h1>
-	<p>This is a test page to ensure that HTML and CSS are working correctly.</p>
-	<p>Here's some more text to make sure the font is working:</p>
-	<p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-	<p>abcdefghijklmnopqrstuvwxyz</p>
-	<p>0123456789</p>
+  <div id="logo-animation"></div>
+  <div id="buttons"></div>
+  <div id="changelog"></div>
+  <div id="future-mods"></div>
+
+  <script>
+    function loadHTML(file, elementId) {
+      fetch(file)
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById(elementId).innerHTML = html;
+        });
+    }
+
+    loadHTML('logo-animation.html', 'logo-animation');
+    loadHTML('buttons.html', 'buttons');
+    loadHTML('changelog.html', 'changelog');
+    loadHTML('future-mods.html', 'future-mods');
+  </script>
 </body>
 </html>
