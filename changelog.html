@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Changelog</title>
+	<style>
+		@font-face {
+			font-family: 'Norse';
+			src: url('https://fablefallen.github.io/fablefonts/fonts/Norse.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+		body {
+			font-family: Norse, sans-serif;
+			background-color: transparent;
+                        font-size: 20px;
+		}
+		h1 {
+			font-size: 50px;
+                        color: #fff;
+			margin-bottom: 10px;
+			animation: glow 2s ease-in-out infinite alternate;
+		}
+		hr {
+			border: none;
+			border-top: 2px solid black;
+			margin-top: 0;
+		}
+		h2 {
+			font-size: 34px;
+			margin-bottom: 10px;
+			margin-top: 20px;
+		}
+		ul {
+            font-size: 22px;
+			margin: 0;
+			padding-left: 30px;
+		}
+        .tooltip {
+			font-size: 18px;
+			position: absolute;
+			z-index: 1;
+			visibility: hidden;
+			background-color: #333;
+			color: #fff;
+			text-align: center;
+			padding: 5px 0;
+			border-radius: 6px;
+			white-space: nowrap;
+		}
+
+		li {
+			list-style-type: none;
+			position: relative;
+		}
+
+		li:hover {
+            color: #f0c022;
+        }
+
+		li:hover .tooltip {
+			visibility: visible;
+		}
+
+		li:hover .tooltiptext {
+			visibility: visible;
+		}
+
+		@keyframes glow {
+			from {
+				text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+			}
+			to {
+				text-shadow: 0 0 20px #fff, 0 0 30px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de, 0 0 200px #ff00de, 0 0 250px #ff00de;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>Changelog</h1>
+	<hr>
+	<h2>Version 1.0</h2>
+    <ul>
+        <li>- Plant Everything<span class="tooltip">This feature allows you to plant all types of crops in your farm.</span></li>
+		<li>- Auto Feed<span class="tooltip">This feature automatically feeds your animals so you don't have to manually do it.</span></li>
+		<li>- Multi Craft<span class="tooltip">This feature allows you to craft multiple items at once.</span></li>
+		<li>- Fascinating Carry Weight<span class="tooltip">This feature increases your carrying capacity.</span></li>
+		<li>- Mass Farming<span class="tooltip">This feature allows you to farm a large amount of crops at once.</span></li>
+		<li>- Automatic Fuel<span class="tooltip">This feature automatically refuels your items so you don't have to manually do it.</span></li>
+		<li>- Toggle Movement<span class="tooltip">This feature allows you to toggle movement for certain activities.</span></li>
+		<li>- Multi User Chest<span class="tooltip">This feature allows multiple users to access a single chest.</span></li>
+		<li>- Craft from Containers<span class="tooltip">This feature allows you to craft items directly from containers.</span></li>
+		<li>- Odin Banners<span class="tooltip">This feature allows you to decorate with Odin-themed banners.</span></li>
+		<li>- Viking Sails<span class="tooltip">This feature allows you to decorate with Viking-themed sails.</span></li>
+		<li>- Comfy Signs<span class="tooltip">This feature allows you to place signs around your base.</span></li>
+		<li>- Simple Auto Sort<span class="tooltip">This feature allows you to automatically sort your items.</span></li>
+		<li>- Quick Stack Store Trash Restock<span class="tooltip">This feature allows you to quickly store, stack, trash, and restock your items.</span></li>
+		<li>- Adventure Backpacks<span class="tooltip">This feature allows you to carry more items with specialized backpacks.</span></li>
+		<li>- Odin Campsite<span class="tooltip">This feature allows you to place an Odin-themed campsite.</span></li>
+		<li>- Recycle<span class="tooltip">This feature allows you to recycle items.</span></li>
+		<li>- Use Equipment In Water<span class="tooltip">This feature allows you to use equipment while in water.</span></li>
+		<li>- Floating Items<span class="tooltip">This feature allows you to collect floating items.</span></li>
+	</ul>
+</body>
+    </ul>
+</body>
+</html>

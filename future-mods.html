@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Valheim Potential Future Mods</title>
+        <style>
+    @font-face {
+        font-family: 'Norse';
+        src: url('https://fablefallen.github.io/fablefonts/fonts/Norse.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+	}
+    body {
+      background-color: #2b2a2a;
+      color: #e6e3d4;
+      font-family: 'Norse';
+    }
+    
+    .future-mods-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1a1a1a;
+      height: 100px;
+    }
+
+    .loading-circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 4px solid #f2f2f2;
+        border-top: 4px solid #3498db;
+        animation: spin 1s ease-in-out infinite;
+    }
+
+    .loading-text {
+        margin-left: 10px;
+        font-size: 24px;
+        color: #f2f2f2;
+        text-transform: uppercase;
+    }
+
+    .future-mods-container {
+      margin-top: 50px;
+      text-align: center;
+    }
+    
+    .future-mods-container h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px #000000;
+    }
+    
+    .future-mods-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .future-mods-list li {
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px #000000;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+    </head>
+
+    <body>
+        <div class="future-mods-header">
+            <div class="loading-circle"></div>
+            <div class="loading-text">INCOMING FUTURE MODS...</div>
+        </div>
+        <div class="future-mods-container">
+            <ul class="future-mods-list">
+                <li>VikingSails V1.1.0</li>
+                <li>PingTweaks</li>
+                <li>LongerDays</li>
+                <li>BedRules</li>
+                <li>DiscordConnector</li>
+            </ul>
+        </div>
+    </body>
+</html>
