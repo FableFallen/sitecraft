@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Norse';
+    src: url('https://fablefallen.github.io/fablefonts/fonts/Norse.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: Norse, sans-serif;
     background-color: #2b2a2a;
@@ -6,7 +13,7 @@ body {
     padding: 0;
 }
 
-.logo-animation-page .c {
+.c {
     position: relative;
     width: 90vmin;
     height: calc(90vmin * 9 / 16);
@@ -15,13 +22,13 @@ body {
     box-shadow: 0 1.25em 1em -.5em #0005;
 }
 
-.logo-animation-page .i {
+.i {
     width: 100%;
     height: 100%;
     background-color: #000;
 }
 
-.logo-animation-page .img {
+.img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -29,19 +36,21 @@ body {
     transition: transform 1s;
 }
 
-.logo-animation-page .discord-link {
+.discord-link {
     position: absolute;
     top: 50%;
     right: 0;
     transform: translate(50%, -50%);
+    font-size: 3rem;
+    color: #7289DA;
 }
 
-.logo-animation-page .c:hover .img {
+.c:hover .img {
     transform: translateX(-3%);
     transition-duration: 5s;
 }
 
-.logo-animation-page :root {
+:root {
     --s1-w: 40vmin;
     --s2-w: 60vmin;
     --s3-w: 10vmin;
@@ -57,9 +66,9 @@ body {
     }
 }
 
-.logo-animation-page.s1,
-.logo-animation-page .s2,
-.logo-animation-page .s3 {
+.s1,
+.s2,
+.s3 {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -67,42 +76,38 @@ body {
     pointer-events: none;
 }
 
-.logo-animation-page .c:hover .s1,
-.logo-animation-page .c:hover .s2,
-.logo-animation-page .c:hover .s3 {
+.c:hover .s1,
+.c:hover .s2,
+.c:hover .s3 {
     animation-name: move-x;
 }
 
-.logo-animation-page .s1 {
+.s1 {
     left: 100%;
     z-index: 1;
     width: var(--s1-w);
     background-color: #fff;
     mix-blend-mode: difference;
-
     --x1: -110vmin;
     --x2: -50vmin;
 }
 
-.logo-animation-page .s2 {
+.s2 {
     z-index: 2;
     width: calc(var(--s2-w) * 2);
     left: calc(100% + var(--s1-w));
     background-color: #000;
-
     --x1: -110vmin;
     --x2: -90vmin;
 }
 
-.logo-animation-page .s3 {
+.s3 {
     z-index: 2;
     width: 10vmin;
     right: 100%;
     background-color: #000;
     animation-delay: .1s;
     animation-fill-mode: forwards;
-    /* add this line */
-
     --x1: 0;
     --x2: 95%;
 }
@@ -113,7 +118,7 @@ body {
     }
 }
 
-.logo-animation-page body {
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,11 +131,11 @@ body {
     justify-content: flex-end;
 }
 
-.logo-animation-page h1 {
+h1 {
     text-align: center;
 }
 
-.logo-animation-page .info {
+.info {
     align-self: flex-end;
     margin: 3rem 1rem 1rem;
     text-align: right;
@@ -140,138 +145,72 @@ body {
     opacity: .75;
 }
 
-.logo-animation-page .info a {
+.info a {
     color: inherit;
 }
 
-@font-face {
-    font-family: 'Norse';
-    src: url('https://fablefallen.github.io/fablefonts/fonts/Norse.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.button-page body {
-    font-family: Norse, sans-serif;
-    background-color: transparent;
-    color: #f3b63c;
-    margin: 0;
-    padding: 0;
-}
-
-.button-page h1 {
-    color: #f3b63c;
-    font-size: 36px;
-    margin: 20px 0;
-    text-align: center;
-    text-shadow: 2px 2px #9c9c9c;
-}
-
-.button-page .container {
+.container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
 }
 
-.button-page .mod-button {
-    font-family: Norse, sans-serif;
-    background-color: #9c9c9c;
-    border: none;
-    color: #f3b63c;
-    cursor: pointer;
-    font-size: 18px;
-    margin: 10px 0;
-    padding: 15px;
-    width: 300px;
-    text-align: center;
-    text-shadow: 1px 1px #000000;
-}
-
-.button-page .mod-button:hover {
+button {
     background-color: #f3b63c;
-    color: #000000;
-    text-shadow: none;
-}
-
-.changelog-page body {
-    font-family: Norse, sans-serif;
-    background-color: transparent;
-    font-size: 20px;
-}
-
-.changelog-page h1 {
-    font-size: 50px;
-    color: #fff;
-    margin-bottom: 10px;
-    animation: glow 2s ease-in-out infinite alternate;
-}
-
-.changelog-page hr {
     border: none;
-    border-top: 2px solid black;
-    margin-top: 0;
+    border-radius: 5px;
+    color: #2b2a2a;
+    cursor: pointer;
+    font-family: Norse, sans-serif;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.changelog-page h2 {
-    font-size: 34px;
-    margin-bottom: 10px;
-    margin-top: 20px;
-}
-
-.changelog-page ul {
-    font-size: 22px;
-    margin: 0;
-    padding-left: 30px;
-}
-
-.changelog-page .tooltip {
-    font-size: 18px;
-    position: absolute;
-    z-index: 1;
-    visibility: hidden;
-    background-color: #333;
+button:hover {
+    background-color: #f3c75d;
     color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-    white-space: nowrap;
 }
 
-.changelog-page li {
+button:focus {
+    outline: none;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #f3b63c;
+    margin: 1rem 0;
+}
+
+h2 {
+    margin: 1rem 0;
+}
+
+ul {
     list-style-type: none;
-    position: relative;
+    padding-left: 0;
 }
 
-.changelog-page li:hover {
-    color: #f0c022;
+.logo-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
-.changelog-page li:hover .tooltip {
-    visibility: visible;
-}
-
-.changelog-page li:hover .tooltiptext {
-    visibility: visible;
-}
-
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
-    }
-
-    to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de, 0 0 200px #ff00de, 0 0 250px #ff00de;
-    }
-}
-
-.future-mods-page body {
+body {
     background-color: #2b2a2a;
     color: #e6e3d4;
     font-family: 'Norse';
 }
 
-.future-mods-page .future-mods-header {
+.future-mods-header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -279,7 +218,7 @@ body {
     height: 100px;
 }
 
-.future-mods-page .loading-circle {
+.loading-circle {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -288,31 +227,31 @@ body {
     animation: spin 1s ease-in-out infinite;
 }
 
-.future-mods-page .loading-text {
+.loading-text {
     margin-left: 10px;
     font-size: 24px;
     color: #f2f2f2;
     text-transform: uppercase;
 }
 
-.future-mods-page .future-mods-container {
+.future-mods-container {
     margin-top: 50px;
     text-align: center;
 }
 
-.future-mods-page .future-mods-container h2 {
+.future-mods-container h2 {
     font-size: 36px;
     margin-bottom: 20px;
     text-shadow: 2px 2px #000000;
 }
 
-.future-mods-page .future-mods-list {
+.future-mods-list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.future-mods-page .future-mods-list li {
+.future-mods-list li {
     font-size: 24px;
     margin-bottom: 10px;
     text-shadow: 1px 1px #000000;
