@@ -1,9 +1,6 @@
-/* Original styles from the changelog and future mods code */
-/* Add them here, along with the new styles for the title container and the footer */
-
 @font-face {
     font-family: 'Norse';
-    src: url('https://www.fablefallen.net/fonts/Norse.woff') format('woff');
+    src: url('../assets/fonts/Norse.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
