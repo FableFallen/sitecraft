@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Norse';
+    src: url('../assets/fonts/Norse.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Norse, sans-serif;
+    background-color: #2b2a2a;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Other body styles */
+}
+
+
+/* Style for the title container */
+.title-container {
+    font-family: Norse, 'sans-serif';
+    color: #f3b63c;
+    font-size: 36px;
+    margin: 20px 0;
+    text-align: center;
+    text-shadow: 2px 2px #9c9c9c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 100px;
+}
+
+
+
+/* Style for the footer */
+footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    /* Change this to your desired professional font */
+    color: #f2f2f2;
+}
+
+footer p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+footer p:last-child {
+    margin-bottom: 0;
+}
+
+.mod-card-front,
+.mod-card-back {
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backface-visibility: hidden;
+  font-size: 1rem;
+  text-align: center;
+  transform-style: preserve-3d;
+}
+
+.mod-card-back {
+  transform: rotateY(180deg);
+}
+
+.active-card {
+  z-index: 2;
+  cursor: pointer;
+}
+
+.mod-carousel {
+  perspective: 1000px;
+}
