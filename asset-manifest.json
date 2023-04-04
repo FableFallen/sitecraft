@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/valheim/sitecraft/static/css/main.3b0c00d5.css",
+    "main.js": "/valheim/sitecraft/static/js/main.1ec1568a.js",
+    "static/media/Norse.woff": "/valheim/sitecraft/static/media/Norse.ce8487926b8589954ccb.woff",
+    "index.html": "/valheim/sitecraft/index.html",
+    "main.3b0c00d5.css.map": "/valheim/sitecraft/static/css/main.3b0c00d5.css.map",
+    "main.1ec1568a.js.map": "/valheim/sitecraft/static/js/main.1ec1568a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b0c00d5.css",
+    "static/js/main.1ec1568a.js"
+  ]
+}
