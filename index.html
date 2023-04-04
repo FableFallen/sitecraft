@@ -3,26 +3,34 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Valheim Mods</title>
-		<link rel="stylesheet" href="styles.css">
+		<link rel="icon" type="image/png" href="assets/images/bank.png">
+		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-		<script src="buttons.js"></script>
-		<script src="changelog.js"></script>
-		<script src="update-notification.js"></script>
-
+		<script src="scripts/buttons.js"></script>
+		<script src="scripts/changelog.js"></script>
+		<script src="scripts/draggable.js"></script>
 	</head>
 	<body>
 
-		<div class="command-prompt" style="display: none;">
-			<h3>Console</h3>
-			<input type="text" id="command-input" placeholder="Enter command" />
+		<div class="command-prompt draggable" style="display:none">
+			<div class="title-bar">
+				<div class="title-bar-text">Command Prompt</div>
+				<div class="title-bar-controls">
+					<button aria-label="Minimize"></button>
+					<button aria-label="Maximize"></button>
+					<button aria-label="Close"></button>
+				</div>
+			</div>
+			<div class="prompt">
+				<div class="console-output"></div> <!-- Add this div -->
+				<span class="prompt-text">C:\&gt;</span>
+				<input type="text" id="command-input" placeholder="Enter command">
+			</div>
 		</div>
 
-		<div class="update-notification">
-			<p>A new version of this website is available. <a href="#"
-					onclick="location.reload(true)">Click here</a> to refresh.</p>
-		</div>
 
+		<!-- now I am thinking about just having an movable cmd appear on the index.html but have no idea how to implment something like that   -->
 		<header>
 			<div class="title-container">
 				<h1>Valheim Mods</h1>
@@ -66,7 +74,7 @@
 		</div>
 
 		<footer>
-			<p>Created by FableFallen and Me Lets go Baby</p>
+			<p>Created by FableFallen</p>
 			<p>Empowering gamers with exceptional mods and services.</p>
 		</footer>
 	</body>

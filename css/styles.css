@@ -17,23 +17,6 @@ body {
     /* Other body styles */
 }
 
-.update-notification {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background-color: #f7d7d7;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    z-index: 9999;
-}
-.update-notification a {
-    color: #000;
-    text-decoration: underline;
-}
-
 
 /* Style for the title container */
 .title-container {
@@ -236,7 +219,7 @@ body {
     align-items: center;
     gap: 20px;
 }
-  
+
 
 .social-media-link {
     display: inline-flex;
@@ -318,3 +301,48 @@ footer p {
 footer p:last-child {
     margin-bottom: 0;
 }
+
+.command-prompt {
+    resize: both;
+    overflow: auto;
+    display: none;
+    width: 60%;
+    height: 60%;
+    background-color: black;
+    border-top: 2px solid white;
+    box-sizing: border-box;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    color: white;
+    left: 50%;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+.command-prompt input[type="text"] {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: monospace;
+    font-size: 14px;
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.draggable {
+    position: fixed;
+    touch-action: none;
+    user-select: none;
+}
+
+.console-output {
+    max-height: calc(100% - 40px);
+    overflow-y: auto;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+}
+
