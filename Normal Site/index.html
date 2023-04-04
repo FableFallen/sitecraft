@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Valheim Mods</title>
+		<link rel="icon" type="image/png" href="assets/images/bank.png">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+		<script src="scripts/buttons.js"></script>
+		<script src="scripts/changelog.js"></script>
+		<script src="scripts/draggable.js"></script>
+	</head>
+	<body>
+
+		<div class="command-prompt draggable" style="display:none">
+			<div class="title-bar">
+				<div class="title-bar-text">Command Prompt</div>
+				<div class="title-bar-controls">
+					<button aria-label="Minimize"></button>
+					<button aria-label="Maximize"></button>
+					<button aria-label="Close"></button>
+				</div>
+			</div>
+			<div class="prompt">
+				<div class="console-output"></div> <!-- Add this div -->
+				<span class="prompt-text">C:\&gt;</span>
+				<input type="text" id="command-input" placeholder="Enter command">
+			</div>
+		</div>
+
+		<!-- now I am thinking about just having an movable cmd appear on the index.html but have no idea how to implment something like that   -->
+		<header>
+			<div class="title-container">
+				<h1>Valheim Mods</h1>
+			</div>
+			<!-- Add your buttons here -->
+			<div class="container">
+
+			</div>
+		</header>
+
+		<section class="changelog">
+			<!-- Use the original changelog code you provided, removing the <style> tag -->
+			<h1>Change Log</h1>
+			<hr>
+		</section>
+
+		<section class="future-mods">
+			<!-- Use the original future mods list code you provided, removing the <style> tag -->
+			<div class="future-mods-header">
+				<div class="loading-circle"></div>
+				<div class="loading-text">INCOMING FUTURE MODS...</div>
+			</div>
+			<div class="future-mods-container">
+				<ul class="future-mods-list">
+					<li>VikingSails V1.1.0</li>
+					<li>PingTweaks</li>
+					<li>LongerDays</li>
+					<li>BedRules</li>
+					<li>DiscordConnector</li>
+				</ul>
+			</div>
+		</section>
+
+		<div class="social-media-footer-container">
+			<div class="social-media">
+				<a href="https://discord.gg/fRjG8NedPT" class="social-media-link
+					discord" target="_blank" rel="noopener noreferrer">
+					<i class="fab fa-discord"></i>
+				</a>
+			</div>
+		</div>
+
+		<footer>
+			<p>Created by FableFallen</p>
+			<p>Empowering gamers with exceptional mods and services.</p>
+		</footer>
+	</body>
+</html>
